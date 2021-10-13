@@ -17,7 +17,7 @@ function App() {
         <Navigation />
         <Router />
       </BrowserRouter>
-    </ Provider>
+    </Provider>
   );
 }
 

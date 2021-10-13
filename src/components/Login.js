@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "@material-ui/core";
 import { TextField } from '@material-ui/core';
 
-const Login = () => {
+const Login = (props) => {
+  console.log(props)
   return (
     <div className="login-form">
     <TextField required="true" placeholder="Username" label="Username"/>

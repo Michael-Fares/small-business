@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.login-form {
+.login-form, .details {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
@@ -51,8 +51,12 @@ ul {
   margin: auto 20px;
 }
 
-.nav-list-item:hover {
+.nav-list-item:hover, .biz-name:hover {
   cursor: pointer;
+}
+
+.biz-name {
+  text-decoration: underline;
 }
 
 .car-container {

@@ -40,11 +40,11 @@ const Router = () => {
         <Switch>
             {/* I will need at least these 2 routes */}
             <Route path="/login" component={Login} />
-
-            <ProtectedRoute path="/add" component={AddListing} />
-
-            <Route path="/" component={Listings} />
             <Route path="/listings/:id" component={Details} />
+            <ProtectedRoute path="/add" component={AddListing} />
+           
+            <Route path="/" component={Listings} />
+            
         </Switch>
     );
 };
