@@ -1,0 +1,1 @@
+ // should be protected by a private route
