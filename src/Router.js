@@ -2,10 +2,10 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
 
-import AddListing from './components/AddListing'
+import AddListing from './containers/AddListing'
 import Listings from './containers/Listings'
-import Login from './components/Login'
-import Details from './components/Details'
+import Login from './containers/Login'
+import Details from './containers/Details'
 
 
 // Will these function be in redux state or local state?
@@ -41,7 +41,8 @@ const Router = () => {
             {/* I will need at least these 2 routes */}
             <Route path="/login" component={Login} />
             <Route path="/listings/:id" component={Details} />
-            <ProtectedRoute path="/add" component={AddListing} />
+            {/* make this route protected after testing */}
+            <Route path="/add" component={AddListing} />
            
             <Route path="/" component={Listings} />
             

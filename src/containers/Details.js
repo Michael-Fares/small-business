@@ -4,7 +4,8 @@ import Details from '../components/Details'
 
 const mapStateToProps = (state) => {
   return {
-    listings: state.listings
+    listings: state.listings,
+    user: state.user
   }
 }
 

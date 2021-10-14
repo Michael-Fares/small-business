@@ -6,16 +6,15 @@ import {
 
 const Details = (props) => {
   const id = props.match.params.id
-    // const listing = props.listings.find(l => l.id == id)
+    const listing = props.listings.find(l => l.id == id)
     console.log("props.listings", props)
   return (
     <div className="details">
-      {id}
-      {/* <Typography variant="h2">{listing["Name"]}</Typography>
-      <Typography>{listing["Hours"]}</Typography>
-      <Typography>{listing["Description"]}</Typography>
+       <Box><Typography variant="h5">{listing["Name"]}</Typography></Box>
+       <Box mt={2}><Typography>{listing["Address"]}</Typography></Box> 
+      <Box mt={2}><Typography>{listing["Hours"]}</Typography></Box>
+      <Box mt={2}><Typography>{listing["Description"]}</Typography></Box>
       {/* This last one will need to call / show the google maps API */}
-      {/* <Typography>{listing["Address"]}</Typography> */}
     </div>
   )
 }

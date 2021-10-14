@@ -1,3 +1,5 @@
+const url = "https://maps.google.com"
+
 export const addListing = (listing) => {
   return {
     type: "ADD_LISTING",
@@ -13,10 +15,10 @@ export const removeListing = (index) => {
   }
 }
 
-export const setLoggedIn = (loggedIn) => {
+export const loginUser = ({user}) => {
   return {
-    type: "SET_LOGIN",
-    value: !loggedIn
+    type: "LOGIN_USER",
+    value: {user}
   }
 }
 

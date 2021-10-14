@@ -1,14 +1,14 @@
 export default {
   user: {
-      username: 'TestUser',
-      email: 'test-user@example.com'
+      username: "",
+      loggedIn: false
   },
   
   listings: [
     {
       "id": 1,
       "Name": "Home Slice Pizza",
-      "Description": "Home Slice Pizza is an independent neighborhood pizza joint serving authentic NY-style pizza—by the slice or pie—to nice people like you",
+      "Description": "Home Slice Pizza is an independent neighborhood pizza joint serving authentic NY-style pizza—by the slice or pie—to nice people like you. We offer homemade, hand tossed, bona fide pies for either dine in or carry out.",
       "Hours": "11AM - 11PM",
       "Address": "1415 S Congress Ave, Austin, TX, 78704"
    },
