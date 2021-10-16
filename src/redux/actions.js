@@ -1,4 +1,3 @@
-const url = "https://maps.google.com"
 
 export const addListing = (listing) => {
   return {
@@ -32,7 +31,7 @@ export const logoutUser = (user) => {
 // change this to fetch coordinates from google maps API
 export const fetchCoordinates = () => {
   return (dispatch) => {
-      fetch(url)
+      fetch('https://maps.googleapis.com/maps/api/js?key=AIzaSyDXK9DB5b6QFG2gFxA4ISprrHty1zvnSWc&callback=initMap&libraries=&v=weekly')
        .then(res => res.json())
        .then(response => {
            const action = {
