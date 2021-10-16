@@ -42,6 +42,12 @@ ul {
   background-color: mediumseagreen;
 }
 
+.logged-in {
+  background-color: lightgray;
+  color: darkgray;
+  padding: 5px 20px;
+}
+
 .nav-list {
   list-style: none;
   display: flex;

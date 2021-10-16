@@ -7,6 +7,7 @@ import { checkAuth } from '../Router'
 
 const Navigation = () => {
     return checkAuth() ? (
+        <>
         <AppBar position="relative">
             <Toolbar className="navbar">
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
@@ -29,6 +30,10 @@ const Navigation = () => {
                 </ul>
             </Toolbar>
         </AppBar>
+        <div className="logged-in">
+            Logged in as: username
+        </div>
+        </>
     ) : (
         <AppBar position="relative">
             <Toolbar className="navbar">
