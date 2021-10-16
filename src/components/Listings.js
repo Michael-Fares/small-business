@@ -1,6 +1,6 @@
-// conditionally render a delete column in the table if user is logged in
 
 import React from 'react'
+import { checkAuth } from '../Router'
 import {
     Container,
     Table,
@@ -10,14 +10,46 @@ import {
     TableRow
 } from '@material-ui/core'
 
+import DeleteIcon from '@material-ui/icons/Delete'
+
+
 import { Link } from 'react-router-dom'
 
 const Listings = (props) => {
     console.log('props.listings', props)
-    return (
+    // conditionally render a delete column in the table if user is logged in
+    return checkAuth() ? (
         <Container maxWidth="lg" className="car-container">
-            {/* Change NAME to props.user.username */}
             <h4>Welcome, {props.user.username}</h4>
+            <Table>
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Name</TableCell>
+                        <TableCell>Description</TableCell>
+                        <TableCell>Hours</TableCell>
+                        <TableCell>Address</TableCell>
+                        <TableCell>Delete</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                {props.listings.map((listing, index) => (
+                    <TableRow key={listing.id}>
+                        <TableCell className="biz-name">
+                            <Link to={`/listings/${listing.id}`}>{listing["Name"]}</Link>
+                            </TableCell>
+                        <TableCell>{listing["Description"]}</TableCell>
+                        <TableCell>{listing["Hours"]}</TableCell>
+                        <TableCell>{listing["Address"]}</TableCell>
+                        <TableCell>
+                            <DeleteIcon className="icon text-red" onClick={() => props.removeListing(index)}/>
+                        </TableCell>
+                    </TableRow>
+                ))}
+                </TableBody>
+            </Table>
+        </Container>
+    ) : (
+        <Container maxWidth="lg" className="car-container">
             <Table>
                 <TableHead>
                     <TableRow>
@@ -28,7 +60,6 @@ const Listings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                {/* Change cars to props.cars and remove the cars.json import above */}
                 {props.listings.map(listing => (
                     <TableRow key={listing.id}>
                         <TableCell className="biz-name">

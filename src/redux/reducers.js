@@ -1,13 +1,22 @@
 
 import { combineReducers } from 'redux'
 
-const user = (state = null, action) => {
+const user = (state = {}, action) => {
   switch (action.type) {
-    case "HANDLE_LOGIN":
-      const user = {
-        
+    case "LOGIN_USER":
+      console.log("login")
+      document.cookie = "loggedIn=true"
+      window.location.replace("/")
+      user = {
+        username: "user",
+        loggedIn: true
       }
-      
+      return user;
+    case "LOGOUT_USER":
+      document.cookie = "loggedIn="
+      window.location.replace("/")
+      user = {}
+      return user;
     default:
       return state;
   }

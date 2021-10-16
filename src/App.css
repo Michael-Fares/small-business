@@ -66,3 +66,19 @@ ul {
 .car-paper {
   padding: 50px;
 }
+
+.icon {
+  font-size: inherit
+}
+
+.icon:hover {
+  cursor: pointer
+}
+
+.text-gray {
+  color: gray
+}
+
+.text-red {
+  color: red
+}

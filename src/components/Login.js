@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 import { TextField } from '@material-ui/core';
 
 const Login = (props) => {
-  console.log(props)
+  console.log(props.user)
   return (
       <form className="login-form">
         <TextField required="true" placeholder="Username" label="Username"/>
@@ -12,7 +12,7 @@ const Login = (props) => {
         <Button fullWidth = {true} 
           variant="contained"
           className="login-button"
-          // add on on click handler to set logged in
+          onClick={props.loginUser}
           >
           Login
         </Button>

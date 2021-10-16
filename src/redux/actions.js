@@ -15,10 +15,17 @@ export const removeListing = (index) => {
   }
 }
 
-export const loginUser = ({user}) => {
+export const loginUser = (user) => {
   return {
     type: "LOGIN_USER",
-    value: {user}
+    value: user
+  }
+}
+
+export const logoutUser = (user) => {
+  return {
+    type: "LOGOUT_USER",
+    value: user
   }
 }
 

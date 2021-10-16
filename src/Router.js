@@ -13,13 +13,13 @@ import Details from './containers/Details'
 // Write checkAuth function here
 // Check the cookies for a cookie called "loggedIn"
 
-const checkAuth = () => {
+export const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
     return cookies["loggedIn"] ? true : false
 }
 
+console.log("value of check auth function", checkAuth())
 
-// Write ProtectedRoute function here
 const ProtectedRoute = ({component: Component, ...rest}) => {
     // ... rest just signifies the rest of the attributes passed into the Route
     console.log("rest", rest)
@@ -42,7 +42,7 @@ const Router = () => {
             <Route path="/login" component={Login} />
             <Route path="/listings/:id" component={Details} />
             {/* make this route protected after testing */}
-            <Route path="/add" component={AddListing} />
+            <ProtectedRoute path="/add" component={AddListing} />
            
             <Route path="/" component={Listings} />
             
