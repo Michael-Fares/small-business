@@ -5,6 +5,8 @@
  import { Box } from '@material-ui/core';
  import { Link } from 'react-router-dom'
 
+ import SimpleMap from './SimpleMap'
+
 
  const AddListing = (props) => {
    console.log(props)
@@ -43,22 +45,27 @@
 
 
    return (
-    <form className="login-form" onSubmit={handleSubmit} action="/listings">
-        <TextField value={listing.Name} required="true" id="Name" onChange={handleTextChange} placeholder="Name" />
-        <TextField value={listing.Address} required="true" id="Address" onChange={handleTextChange} placeholder="Address" />
-        <TextField value={listing.Hours} required="true" id="Hours" onChange={handleTextChange} placeholder="Hours (ex 8AM-9PM)" />
-        <TextField value={listing.Description} required="true" id="Description" onChange={handleTextChange} placeholder="Description" />
-          <div className="margin-top-sm button-wide">
-         <Box mt={4}>   
-        <Button fullWidth = {true} 
-          variant="contained"
-          color="primary"
-          type="submit">
-          Save
-        </Button>
-        </Box>
-        </div>
-      </form>
+     <div className="flex-row">
+       <div>
+        <form className="add-listing" onSubmit={handleSubmit} action="/listings">
+            <TextField value={listing.Name} required="true" id="Name" onChange={handleTextChange} placeholder="Name" />
+            <TextField value={listing.Address} required="true" id="Address" onChange={handleTextChange} placeholder="Address" />
+            <TextField value={listing.Hours} required="true" id="Hours" onChange={handleTextChange} placeholder="Hours (ex 8AM-9PM)" />
+            <TextField value={listing.Description} required="true" id="Description" onChange={handleTextChange} placeholder="Description" />
+              <div className="margin-top-sm button-wide">
+            <Box mt={4}>   
+            <Button fullWidth = {true} 
+              variant="contained"
+              color="primary"
+              type="submit">
+              Save
+            </Button>
+            </Box>
+            </div>
+          </form>
+          </div>
+          <SimpleMap className="simple-map"/>
+      </div>
    )
  }
 

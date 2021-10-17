@@ -2,11 +2,28 @@
   text-align: center;
 }
 
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 .login-form, .details {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
   width: 50%;
+}
+
+.add-listing {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-right: 10px;
 }
 
 .login-button {
