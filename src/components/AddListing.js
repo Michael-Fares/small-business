@@ -4,8 +4,9 @@
  import { TextField } from '@material-ui/core';
  import { Box } from '@material-ui/core';
  import { Link } from 'react-router-dom'
+ import GoogleMapReact from 'google-map-react';
 
- import SimpleMap from './SimpleMap'
+
 
 
  const AddListing = (props) => {
@@ -64,7 +65,17 @@
             </div>
           </form>
           </div>
-          <SimpleMap className="simple-map"/>
+          <div style={{ height: '50vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: 'AIzaSyDXK9DB5b6QFG2gFxA4ISprrHty1zvnSWc' }}
+          defaultCenter={{
+            lat: 30.2672,
+            lng: -97.7431
+          }}
+          defaultZoom={11}
+        >
+        </GoogleMapReact>
+      </div>
       </div>
    )
  }
