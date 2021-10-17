@@ -8,8 +8,6 @@ import Login from './containers/Login'
 import Details from './containers/Details'
 
 
-// Will these function be in redux state or local state?
-
 // Write checkAuth function here
 // Check the cookies for a cookie called "loggedIn"
 
@@ -35,13 +33,12 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 
 
 
-const Router = () => {
+const Router = (window) => {
     return (
         <Switch>
             {/* I will need at least these 2 routes */}
             <Route path="/login" component={Login} />
             <Route path="/listings/:id" component={Details} />
-            {/* make this route protected after testing */}
             <ProtectedRoute path="/add" component={AddListing} />
            
             <Route path="/" component={Listings} />

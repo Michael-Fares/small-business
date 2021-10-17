@@ -10,7 +10,10 @@ import store from './redux/store'
 
 import './App.css';
 
+
+
 function App() {
+  
   return (
     <Provider store={store}>
       <BrowserRouter>

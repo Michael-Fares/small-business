@@ -5,10 +5,13 @@ import {
   Box
 } from '@material-ui/core';
 
+import {geocoder} from '../geolocate.js'
+
 import RoomIcon from '@material-ui/icons/Room'
 
-const google = window.google 
-const geocoder = new google.maps.Geocoder()
+
+
+
   
 
 
@@ -24,7 +27,7 @@ const Details = (props) => {
   
   // using goolge geolocation API to get the lat and lng of the lising address
   useEffect(() => {
-  geocoder.geocode({
+    geocoder.geocode({
     address: listing['Address']
   }).then((data) => {
      setLat(data.results[0].geometry.location.lat())
@@ -48,12 +51,11 @@ const Details = (props) => {
             lat: 30.2672,
             lng: -97.7431
           }}
-          defaultZoom={10}
+          defaultZoom={11}
         >
             <RoomIcon className="text-red"
             lat={lat}
             lng={lng}
-            text={listing["Address"]}
           />
         </GoogleMapReact>
       </div>

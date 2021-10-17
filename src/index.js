@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
+const google = window.google
 ReactDOM.render(
   <React.StrictMode>
     <App />
