@@ -25,7 +25,8 @@ const Details = (props) => {
   
   // using goolge geolocation API to get the lat and lng of the lising address
   const handleApiLoaded = (map, maps) => {
-    const geocoder = new window.google.maps.Geocoder() 
+    const geocoder = new window.google.maps.Geocoder()
+    console.log('geocoder', geocoder) 
     geocoder.geocode({
     address: listing['Address']
   }).then((data) => {
@@ -43,7 +44,7 @@ const Details = (props) => {
       <Box mt={2} mb={2}><Typography>{listing["Description"]}</Typography></Box>
       <div style={{ height: '50vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyDXK9DB5b6QFG2gFxA4ISprrHty1zvnSWc' }}
+          bootstrapURLKeys={{ key: 'AIzaSyBZ06CRoSftd6W25CbRcKo-Vbleaa94um8' }}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           defaultCenter={{

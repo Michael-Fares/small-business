@@ -67,7 +67,7 @@
           </div>
           <div style={{ height: '50vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyDXK9DB5b6QFG2gFxA4ISprrHty1zvnSWc' }}
+          bootstrapURLKeys={{ key: 'AIzaSyBZ06CRoSftd6W25CbRcKo-Vbleaa94um8'}}
           defaultCenter={{
             lat: 30.2672,
             lng: -97.7431
