@@ -103,6 +103,10 @@ ul {
 }
 
 .text-red {
-  color: red
+  color: red;
+}
+
+.pin {
+  transform: scale(1.5);
 }
 

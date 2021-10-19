@@ -48,12 +48,12 @@ const Details = (props) => {
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           defaultCenter={{
-            lat: 30.2672,
-            lng: -97.7431
+            lat: lat || 30.2672,
+            lng: lng || -97.7431
           }}
           defaultZoom={12}
         >
-            <RoomIcon className="text-red"
+            <RoomIcon className="text-red pin"
             lat={lat}
             lng={lng}
           />
