@@ -19,7 +19,7 @@ const Listings = (props) => {
     console.log('props.listings', props)
     // conditionally render a delete column in the table if user is logged in
     return checkAuth() ? (
-        <Container maxWidth="lg" className="car-container">
+        <Container className="car-container">
             <Table>
                 <TableHead>
                     <TableRow>
